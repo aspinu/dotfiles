@@ -1,0 +1,22 @@
+-- Options are automatically loaded before lazy.nvim startup
+-- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
+-- Add any additional options here
+vim.opt.relativenumber = true
+vim.opt.undofile = true
+-- { 'mistweaverco/kulala.nvim', opts = {} },
+-- vim.diagnostic.config({
+--   signs = {
+--     text = {
+--       [vim.diagnostic.severity.ERROR] = "",
+--       [vim.diagnostic.severity.WARN] = "",
+--       [vim.diagnostic.severity.HINT] = "",
+--       [vim.diagnostic.severity.INFO] = "",
+--     },
+--     numhl = {
+--       [vim.diagnostic.severity.ERROR] = "ErrorMsg",
+--       [vim.diagnostic.severity.WARN] = "WarningMsg",
+--       [vim.diagnostic.severity.HINT] = "DiagnosticHint",
+--       [vim.diagnostic.severity.INFO] = "DiagnosticInfo",
+--     },
+--   },
+-- })
