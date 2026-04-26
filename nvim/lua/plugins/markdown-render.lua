@@ -10,8 +10,8 @@ return {
       heading = {
         enabled = true,
         render_modes = false,
-        atx = true,
-        setext = true,
+        atx = false,
+        setext = false,
         icons = { "󰲡 ", "󰲣 ", "󰲥 ", "󰲧 ", "󰲩 ", "󰲫 " },
         position = "overlay",
         signs = { "󰫎 " },
