@@ -1,4 +1,5 @@
-theme = "Catppuccin Mocha"
+theme = "Ayu Mirage"
+cursor-color = #FF00FF
 font-size = 18
 font-family = JetBrainsMono Nerd Font Mono
 font-feature = -calt

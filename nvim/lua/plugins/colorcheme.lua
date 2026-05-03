@@ -191,6 +191,7 @@ return {
       -- colorscheme = "monokai-pro-octagon",
       -- colorscheme = "bluloco",
       -- colorscheme = "gruvbox",
+      -- colorscheme = "catppuccin-mocha",
       -- colorscheme = "tokyonight-night",
       colorscheme = "ayu-mirage",
       -- colorscheme = "kanagawa",
