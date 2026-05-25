@@ -27,11 +27,11 @@
 
 2. Generate config and specifiy the VIP Endpoint, does not need to run talos,can be any free IP from the Network
 
-`talosctl gen config talos-lab-cluster https://192.168.178.250:6443 --with-secrets secrets.yaml --install-disk /dev/nvme0n1`
+   `talosctl gen config talos-lab-cluster https://192.168.178.250:6443 --with-secrets secrets.yaml --install-disk /dev/nvme0n1`
 
-    This will create clonstralplane.yaml, talosconfig and worker.yaml files.
+   This will create clonstralplane.yaml, talosconfig and worker.yaml files.
 
-1. Add the VIP config at the end of contrloplane.yaml, for link name use Network interface indetified in Instalation step 2. and add the designated VIP IP
+3. Add the VIP config at the end of contrloplane.yaml, for link name use Network interface indetified in Instalation step 2. and add the designated VIP IP
 
    ```
    -
@@ -42,7 +42,7 @@
 
    ```
 
-1. Add an additional yaml, or change controlplane yaml to allow scheduling on controlplane nodes
+4. Add an additional yaml, or change controlplane yaml to allow scheduling on controlplane nodes
 
    ```
 
@@ -51,17 +51,17 @@
 
    ```
 
-1. Apply Config on each of the members
+5. Apply Config on each of the members
 
    `talosctl apply-config --insecure --nodes 192.168.178.95 --file controlplane.yaml --config-patch @allow-workers.yaml`
    `talosctl apply-config --insecure --nodes 192.168.178.96 --file controlplane.yaml --config-patch @allow-workers.yaml`
    `talosctl apply-config --insecure --nodes 192.168.178.97 --file controlplane.yaml --config-patch @allow-workers.yaml`
 
-1. Add nodes to talos config
+6. Add nodes to talos config
 
    `talosctl config endpoint 192.168.178.95 192.168.178.96 192.168.178.97`
    `talosctl bootstrap --nodes 192.168.178.95 --endpoints 192.168.178.95 --talosconfig ~/.talos/config`
 
-1. Generate Kubeconfig
+7. Generate Kubeconfig
 
 `talosctl kubeconfig --node 192.168.178.95`
