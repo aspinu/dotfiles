@@ -6,7 +6,10 @@ return {
     ---@type snacks.Config
     opts = {
       bigfile = { enabled = true },
-      dashboard = { enabled = true },
+      dashboard = {
+
+        enabled = true,
+      },
       explorer = { enabled = true },
       indent = { enabled = true },
       input = { enabled = true },
@@ -47,7 +50,7 @@ return {
       {
         "<leader>/",
         function()
-          Snacks.picker.grep()
+          Snacks.picker.grep({ layout = "telescope" })
         end,
         desc = "Grep",
       },
@@ -259,14 +262,14 @@ return {
       {
         "<leader>sb",
         function()
-          Snacks.picker.lines({ layout = "dropdown" })
+          Snacks.picker.lines({ layout = "telescope" })
         end,
         desc = "Buffer Lines",
       },
       {
         "<leader>sB",
         function()
-          Snacks.picker.grep_buffers({ layout = "dropdown" })
+          Snacks.picker.grep_buffers({ layout = "telescope" })
         end,
         desc = "Grep Open Buffers",
       },
@@ -289,7 +292,7 @@ return {
       {
         '<leader>s"',
         function()
-          Snacks.picker.registers()
+          Snacks.picker.registers({ layout = "telescope" })
         end,
         desc = "Registers",
       },

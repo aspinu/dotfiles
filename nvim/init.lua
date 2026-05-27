@@ -6,6 +6,7 @@ require("config.autocmds")
 require("config.treesitter")
 require("config.lsp")
 require("plugins.snacks")
+require("plugins.blink")
 require("plugins.colorscheme")
 
 vim.cmd.colorscheme("ayu-dark")

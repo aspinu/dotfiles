@@ -2,9 +2,18 @@ vim.pack.add({
     "https://github.com/nvim-mini/mini.nvim",
     "https://github.com/neovim/nvim-lspconfig",
     "https://github.com/mason-org/mason.nvim",
+    "https://github.com/mason-org/mason-lspconfig.nvim",
+    	{
+		src = "https://github.com/saghen/blink.cmp",
+		version = vim.version.range("^1"),
+	},
 })
 
 require("mason").setup()
+require("mason-lspconfig").setup {
+  automatic_enable = true,
+    ensure_installed = { "lua_ls", "marksman" },
+}
 
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { desc = "Go to definition" })
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { desc = "Format Local buffer" })
@@ -13,7 +22,8 @@ vim.keymap.set("n", "df", vim.diagnostic.open_float, { desc = "Show line diagnos
 vim.diagnostic.config({ virtual_text = true })
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = vim.tbl_deep_extend("force", capabilities, require("mini.completion").get_lsp_capabilities())
+-- capabilities = vim.tbl_deep_extend("force", capabilities, require("mini.completion").get_lsp_capabilities())
+capabilities = vim.tbl_deep_extend("force", capabilities, require("blink.cmp").get_lsp_capabilities())
 
 vim.lsp.config("*", { capabilities = capabilities })
 
