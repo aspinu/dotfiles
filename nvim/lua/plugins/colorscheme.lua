@@ -4,7 +4,7 @@ require('ayu').setup({
         overrides = function()
           if vim.o.background == "dark" then
             return {
-              Statement = { bold = true, fg = "#10b0fe" },
+              Statement = { bold = true, fg = "#029E92" },
               Operator = { fg = "#ff6d7e" },
               Title = { fg = "#10b0fe" },
               -- Type = { fg = "#ff6d7e" },
@@ -27,6 +27,7 @@ require('ayu').setup({
               CursorLineNr = { fg = "#FA4420" },
               LineNr = { fg = "#274670" },
               -- PreProc = { fg = "#FA4420" },
+              Statement = { bold = true, fg = "#029E92" },
               -- MatchParen = { fg = "#ff00ff" },
               Constant = { fg = "#ff00ff" },
               ["@variable.builtin"] = { fg = "#029E92" },

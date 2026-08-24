@@ -1,6 +1,7 @@
-return {
-  {
-    "MeanderingProgrammer/render-markdown.nvim",
+vim.pack.add({"https://github.com/MeanderingProgrammer/render-markdown.nvim"})
+local markdown = require("render-markdown")
+
+markdown.setup({
     opts = {
       heading = {
         enabled = true,
@@ -24,13 +25,15 @@ return {
       },
     },
     file_types = { "markdown", "norg", "rmd", "org", "codecompanion" },
-    config = function(_, opts)
-      require("render-markdown").setup(opts)
-      Snacks.toggle({
-        name = "Render Markdown",
-        get = require("render-markdown").get,
-        set = require("render-markdown").set,
-      }):map("<leader>um")
-    end,
-  },
-}
+  --   config = function(_, opts)
+  --     require("render-markdown").setup(opts)
+  --     Snacks.toggle({
+  --       name = "Render Markdown",
+  --       get = require("render-markdown").get,
+  --       set = require("render-markdown").set,
+  --     }):map("<leader>um")
+  --   end,
+  -- }
+
+})
+

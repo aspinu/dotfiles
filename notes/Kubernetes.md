@@ -11,11 +11,11 @@
 
 ## Kubernets
 
-    - K3S
+    - TalosLiux
     - Helm
     - Kustomzie
     - ArgoCD maybe
-    - NGINX ingress controller
+     ~~NGINX ingress controller~~
     - external DNS - helm chart
 
 ### CSI
@@ -261,8 +261,8 @@ MetalLB
 
 > [!TODO]
 
-- [ ] Exclide MetalLB range from router ex 192.168.178.200 - 192.168.178.254
-- [ ] install metal lb with kustomize and flux
+- [x] Exclide MetalLB range from router ex 192.168.178.200 - 192.168.178.254
+- [x] install metal lb with kustomize and flux
 
 ---
 
@@ -302,4 +302,28 @@ MetalLB
 └── home-cl-1/
 └── kustomization.yaml # The master list (You toggle your tools on/off here)
 
+## Date: 
 ---
+
+
+
+1. 
+    - three
+2. 
+
+
+--- 
+
+- [x] Traefik
+
+>[!TODO]To Install 
+#### Apps
+- [ ] pi-hole
+- [ ] paperless ngx
+- [ ] Postgress
+- [-] Homepage
+- [ ] Forgejo -git
+
+
+
+
