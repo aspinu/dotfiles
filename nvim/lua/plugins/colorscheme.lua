@@ -10,6 +10,7 @@ require('ayu').setup({
               -- Type = { fg = "#ff6d7e" },
               LineNr = { fg = "#274670" },
               Directory = { fg = "#16A883" },
+              String = { fg = "#a6e3a1" },
               Constant = { fg = "#ff78ff" },
             }
           else
